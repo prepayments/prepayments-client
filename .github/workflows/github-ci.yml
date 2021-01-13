@@ -11,18 +11,19 @@ jobs:
             JHI_DISABLE_WEBPACK_LOGS: true
             NG_CLI_ANALYTICS: false
         steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-node@v1
-              with:
-                  node-version: 12.16.1
-            - name: Install node.js packages
-              run: npm install
+            # - uses: actions/checkout@v2
+            # - uses: actions/setup-node@v1
+            #   with:
+            #       node-version: 12.16.1
 
-            - name: Run frontend test
-              run: npm run test
+            # - name: Install node.js packages
+            #   run: npm install
 
-            - name: Package application
-              run: npm run build
+            # - name: Run frontend test
+            #   run: npm run test
+
+            # - name: Package application
+            #   run: npm run build
 
             - name: Login to Docker hub
               uses: docker/login-action@v1
