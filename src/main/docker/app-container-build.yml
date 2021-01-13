@@ -1,7 +1,7 @@
-version: "3"
+version: '3'
 
 services:
-  fastapi-ml-quickstart:
+  prepayments-client:
     build: .
     container_name: prepayments/prepayments-client:0.0.1-SNAPSHOT
     ports:
