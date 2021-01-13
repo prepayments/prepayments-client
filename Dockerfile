@@ -3,7 +3,7 @@ FROM node:10-alpine AS compile-image
 
 WORKDIR /opt/ng
 # Enable the line below for local dev behind proxy
-#COPY .npmrc /opt/ng
+COPY .npmrc /opt/ng
 COPY package.json /opt/ng
 COPY package-lock.json /opt/ng
 

@@ -3,4 +3,4 @@ services:
   prepayments-client:
     image: prepayments/prepayments-client:0.0.1-SNAPSHOT
     ports:
-      - 8000:15001
+      - 80:15001
