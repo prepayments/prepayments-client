@@ -15,7 +15,7 @@
     "prodDatabaseType": "sql",
     "creationTimestamp": 1610524371413,
     "testFrameworks": ["protractor"],
-    "jhiPrefix": "jhi",
+    "jhiPrefix": "gha",
     "entitySuffix": "",
     "dtoSuffix": "DTO",
     "otherModules": [],
