@@ -12,10 +12,11 @@ RUN npm install
 
 ENV PATH="./node_modules/.bin:$PATH"
 
-COPY . /opt/ng
 RUN npm run build --prod
 
 # Stage 2
 FROM nginx
 COPY src/main/docker/nginx/nginx-default.conf /etc/nginx/conf.d/default.conf
 COPY --from=compile-image /opt/ng/build/resources/main/static /usr/share/nginx/html
+
+CMD ["nginx", "-g", "daemon off;"]
