@@ -1,13 +1,21 @@
 # Stage 1
-FROM node:10-alpine as build-step
-RUN mkdir -p /app
-WORKDIR /app
-COPY package.json /app
-COPY package-lock.json /app
+FROM node:10-alpine AS compile-image
+
+WORKDIR /opt/ng
+# Enable the line below for local dev behind proxy
+#COPY .npmrc /opt/ng
+COPY package.json /opt/ng
+COPY package-lock.json /opt/ng
+
+COPY . /opt/ng
 RUN npm install
-COPY . /app
+
+ENV PATH="./node_modules/.bin:$PATH"
+
+COPY . /opt/ng
 RUN npm run build --prod
 
 # Stage 2
-FROM nginx:1.17.1-alpine
-COPY --from=build-step app/build/resources/main/static /usr/share/nginx/html
+FROM nginx
+COPY src/main/docker/nginx/nginx-default.conf /etc/nginx/conf.d/default.conf
+COPY --from=compile-image /opt/ng/build/resources/main/static /usr/share/nginx/html

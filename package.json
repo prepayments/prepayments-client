@@ -1,7 +1,7 @@
 {
-  "name": "prepayments",
+  "name": "prepayments-client",
   "version": "0.0.1-SNAPSHOT",
-  "description": "Description for prepayments",
+  "description": "Angular client for the prepayments application",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [
