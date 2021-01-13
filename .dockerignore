@@ -1,11 +1,10 @@
-.git
-.firebase
+/.git
 .editorconfig
 /.jhipster
 /.github
 /node_modules
 /test
-/docs
 .gitignore
 *.zip
 *.md
+*.log
