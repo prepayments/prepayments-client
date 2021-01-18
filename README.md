@@ -102,6 +102,27 @@ update src/main/webapp/app/app.module.ts
 
 ## Building for production
 
+To create a docker container run
+
+```
+docker build . -t prepayments/prepayments-client:0.0.1-SNAPSHOT
+
+```
+
+The containerised app can be started with
+
+```
+docker-compose -f src/main/docker/app.yml up -d
+
+```
+
+And is configured to be accessed from
+
+```
+http://localhost:15001
+
+```
+
 ### Packaging as jar
 
 To build the final jar and optimize the prepayments application for production, run:
