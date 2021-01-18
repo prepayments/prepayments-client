@@ -16,14 +16,14 @@ jobs:
               with:
                   node-version: 12.16.1
 
-            # - name: Install node.js packages
-            #   run: npm install
+            - name: Install node.js packages
+              run: npm install
 
-            # - name: Run frontend test
-            #   run: npm run test
+            - name: Run frontend test
+              run: npm run test
 
-            # - name: Package application
-            #   run: npm run build
+            - name: Package application
+              run: npm run build
 
             - name: Login to Docker hub
               uses: docker/login-action@v1
