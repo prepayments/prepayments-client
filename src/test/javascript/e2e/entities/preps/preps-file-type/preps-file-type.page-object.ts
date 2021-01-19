@@ -34,6 +34,7 @@ export class PrepsFileTypeUpdatePage {
   descriptionInput = element(by.id('field_description'));
   fileTemplateInput = element(by.id('file_fileTemplate'));
   prepsfileTypeSelect = element(by.id('field_prepsfileType'));
+  prepsfileDeleteProcessTypeSelect = element(by.id('field_prepsfileDeleteProcessType'));
 
   async getPageTitle(): Promise<string> {
     return this.pageTitle.getText();
@@ -85,6 +86,18 @@ export class PrepsFileTypeUpdatePage {
 
   async prepsfileTypeSelectLastOption(): Promise<void> {
     await this.prepsfileTypeSelect.all(by.tagName('option')).last().click();
+  }
+
+  async setPrepsfileDeleteProcessTypeSelect(prepsfileDeleteProcessType: string): Promise<void> {
+    await this.prepsfileDeleteProcessTypeSelect.sendKeys(prepsfileDeleteProcessType);
+  }
+
+  async getPrepsfileDeleteProcessTypeSelect(): Promise<string> {
+    return await this.prepsfileDeleteProcessTypeSelect.element(by.css('option:checked')).getText();
+  }
+
+  async prepsfileDeleteProcessTypeSelectLastOption(): Promise<void> {
+    await this.prepsfileDeleteProcessTypeSelect.all(by.tagName('option')).last().click();
   }
 
   async save(): Promise<void> {

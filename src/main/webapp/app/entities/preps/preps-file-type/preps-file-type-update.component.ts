@@ -25,6 +25,7 @@ export class PrepsFileTypeUpdateComponent implements OnInit {
     fileTemplate: [],
     fileTemplateContentType: [],
     prepsfileType: [],
+    prepsfileDeleteProcessType: [],
   });
 
   constructor(
@@ -50,6 +51,7 @@ export class PrepsFileTypeUpdateComponent implements OnInit {
       fileTemplate: prepsFileType.fileTemplate,
       fileTemplateContentType: prepsFileType.fileTemplateContentType,
       prepsfileType: prepsFileType.prepsfileType,
+      prepsfileDeleteProcessType: prepsFileType.prepsfileDeleteProcessType,
     });
   }
 
@@ -93,6 +95,7 @@ export class PrepsFileTypeUpdateComponent implements OnInit {
       fileTemplateContentType: this.editForm.get(['fileTemplateContentType'])!.value,
       fileTemplate: this.editForm.get(['fileTemplate'])!.value,
       prepsfileType: this.editForm.get(['prepsfileType'])!.value,
+      prepsfileDeleteProcessType: this.editForm.get(['prepsfileDeleteProcessType'])!.value,
     };
   }
 

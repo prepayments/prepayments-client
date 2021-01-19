@@ -53,6 +53,7 @@ describe('PrepsFileType e2e test', () => {
       prepsFileTypeUpdatePage.setDescriptionInput('description'),
       prepsFileTypeUpdatePage.setFileTemplateInput(absolutePath),
       prepsFileTypeUpdatePage.prepsfileTypeSelectLastOption(),
+      prepsFileTypeUpdatePage.prepsfileDeleteProcessTypeSelectLastOption(),
     ]);
 
     expect(await prepsFileTypeUpdatePage.getPrepsFileTypeNameInput()).to.eq(

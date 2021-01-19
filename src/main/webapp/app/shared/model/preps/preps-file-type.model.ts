@@ -1,5 +1,6 @@
 import { PrepsFileMediumTypes } from 'app/shared/model/enumerations/preps-file-medium-types.model';
 import { PrepsFileModelType } from 'app/shared/model/enumerations/preps-file-model-type.model';
+import { PrepsFileDeleteProcessType } from 'app/shared/model/enumerations/preps-file-delete-process-type.model';
 
 export interface IPrepsFileType {
   id?: number;
@@ -9,6 +10,7 @@ export interface IPrepsFileType {
   fileTemplateContentType?: string;
   fileTemplate?: any;
   prepsfileType?: PrepsFileModelType;
+  prepsfileDeleteProcessType?: PrepsFileDeleteProcessType;
 }
 
 export class PrepsFileType implements IPrepsFileType {
@@ -19,6 +21,7 @@ export class PrepsFileType implements IPrepsFileType {
     public description?: string,
     public fileTemplateContentType?: string,
     public fileTemplate?: any,
-    public prepsfileType?: PrepsFileModelType
+    public prepsfileType?: PrepsFileModelType,
+    public prepsfileDeleteProcessType?: PrepsFileDeleteProcessType
   ) {}
 }

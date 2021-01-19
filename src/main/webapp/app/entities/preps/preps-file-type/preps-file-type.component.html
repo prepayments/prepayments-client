@@ -28,6 +28,7 @@
                     <th scope="col"  jhiSortBy="description"><span>Description</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="fileTemplate"><span>File Template</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="prepsfileType"><span>Prepsfile Type</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="prepsfileDeleteProcessType"><span>Prepsfile Delete Process Type</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -42,6 +43,7 @@
                         <span *ngIf="prepsFileType.fileTemplate">{{ prepsFileType.fileTemplateContentType }}, {{ byteSize(prepsFileType.fileTemplate) }}</span>
                     </td>
                     <td>{{ prepsFileType.prepsfileType }}</td>
+                    <td>{{ prepsFileType.prepsfileDeleteProcessType }}</td>
                     <td class="text-right">
                         <div class="btn-group">
                             <button type="submit"

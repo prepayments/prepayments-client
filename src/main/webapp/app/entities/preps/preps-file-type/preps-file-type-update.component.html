@@ -77,6 +77,17 @@
                     <select class="form-control" name="prepsfileType" formControlName="prepsfileType" id="field_prepsfileType">
                         <option value="CURRENCY_LIST">CURRENCY_LIST</option>
                         <option value="PREPAYMENT_DATA">PREPAYMENT_DATA</option>
+                        <option value="PREPAYMENT_ENTRY">PREPAYMENT_ENTRY</option>
+                        <option value="AMORTIZATION_ENTRY">AMORTIZATION_ENTRY</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_prepsfileDeleteProcessType">Prepsfile Delete Process Type</label>
+                    <select class="form-control" name="prepsfileDeleteProcessType" formControlName="prepsfileDeleteProcessType" id="field_prepsfileDeleteProcessType">
+                        <option value="DELETE_PREPAYMENT_DATA">DELETE_PREPAYMENT_DATA</option>
+                        <option value="DELETE_PREPAYMENT_ENTRY">DELETE_PREPAYMENT_ENTRY</option>
+                        <option value="DELETE_AMORTIZATION_ENTRY">DELETE_AMORTIZATION_ENTRY</option>
                     </select>
                 </div>
             </div>

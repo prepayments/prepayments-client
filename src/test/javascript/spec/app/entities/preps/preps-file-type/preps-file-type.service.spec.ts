@@ -4,6 +4,7 @@ import { PrepsFileTypeService } from 'app/entities/preps/preps-file-type/preps-f
 import { IPrepsFileType, PrepsFileType } from 'app/shared/model/preps/preps-file-type.model';
 import { PrepsFileMediumTypes } from 'app/shared/model/enumerations/preps-file-medium-types.model';
 import { PrepsFileModelType } from 'app/shared/model/enumerations/preps-file-model-type.model';
+import { PrepsFileDeleteProcessType } from 'app/shared/model/enumerations/preps-file-delete-process-type.model';
 
 describe('Service Tests', () => {
   describe('PrepsFileType Service', () => {
@@ -29,7 +30,8 @@ describe('Service Tests', () => {
         'AAAAAAA',
         'image/png',
         'AAAAAAA',
-        PrepsFileModelType.CURRENCY_LIST
+        PrepsFileModelType.CURRENCY_LIST,
+        PrepsFileDeleteProcessType.DELETE_PREPAYMENT_DATA
       );
     });
 
@@ -69,6 +71,7 @@ describe('Service Tests', () => {
             description: 'BBBBBB',
             fileTemplate: 'BBBBBB',
             prepsfileType: 'BBBBBB',
+            prepsfileDeleteProcessType: 'BBBBBB',
           },
           elemDefault
         );
@@ -90,6 +93,7 @@ describe('Service Tests', () => {
             description: 'BBBBBB',
             fileTemplate: 'BBBBBB',
             prepsfileType: 'BBBBBB',
+            prepsfileDeleteProcessType: 'BBBBBB',
           },
           elemDefault
         );
