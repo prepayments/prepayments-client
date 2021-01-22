@@ -11,7 +11,7 @@ type EntityArrayResponseType = HttpResponse<ICompilationRequest[]>;
 
 @Injectable({ providedIn: 'root' })
 export class CompilationRequestService {
-  public resourceUrl = SERVER_API_URL + 'api/compilation-requests';
+  public resourceUrl = SERVER_API_URL + 'api/app/compilation-requests';
   public resourceSearchUrl = SERVER_API_URL + 'api/_search/compilation-requests';
 
   constructor(protected http: HttpClient) {}
