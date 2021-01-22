@@ -24,6 +24,11 @@ import { RouterModule } from '@angular/router';
         path: 'preps-file-upload',
         loadChildren: () => import('./preps/preps-file-upload/preps-file-upload.module').then(m => m.PrepaymentsPrepsFileUploadModule),
       },
+      {
+        path: 'compilation-request',
+        loadChildren: () =>
+          import('./compilation/compilation-request/compilation-request.module').then(m => m.PrepaymentsCompilationRequestModule),
+      },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],
