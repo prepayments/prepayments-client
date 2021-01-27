@@ -7,6 +7,6 @@ export const HOME_ROUTE: Route = {
   component: HomeComponent,
   data: {
     authorities: [],
-    pageTitle: 'PREPS 2.0',
+    pageTitle: 'PREPS 2.0: Prepayments data maintenance',
   },
 };
